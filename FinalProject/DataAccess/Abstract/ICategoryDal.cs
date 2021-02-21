@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    interface ICategoryDal
+    public interface ICategoryDal
     {
     }
 }
