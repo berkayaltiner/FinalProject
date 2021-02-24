@@ -8,6 +8,7 @@ using System.Text;
 
 namespace DataAccess.Concrete.InMemory
 {
+    //I am working on Entity Framework , I will not work in Memory anymore.
     public class InMemoryProductDal : IProductDal
     {
         List<Product> _products;
@@ -85,5 +86,6 @@ namespace DataAccess.Concrete.InMemory
             productToUpdate.UnitsInStock = product.UnitsInStock;
 
         }
+        
     }
 }
