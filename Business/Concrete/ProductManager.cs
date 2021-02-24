@@ -21,5 +21,15 @@ namespace Business.Concrete
             //You can write Business and validation codes.
             return _productDal.GetAll();
         }
+
+        public List<Product> GetAllByCategoryId(int categodyId)
+        {
+            return _productDal.GetAll(p=>p.CategoryId == categodyId);
+        }
+
+        public List<Product> GetByUnitPrice(decimal min, decimal max)
+        {
+            return _productDal.GetAll(p => p.UnitPrice >= min && p.UnitPrice <= max);
+        }
     }
 }
