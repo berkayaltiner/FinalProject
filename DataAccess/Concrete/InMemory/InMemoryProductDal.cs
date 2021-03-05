@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -76,6 +77,11 @@ namespace DataAccess.Concrete.InMemory
             return _products.Where(p => p.CategoryId == categoryId).ToList();
         }
 
+        public List<ProductDeteailDto> GetProductDeteailDtos()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Product product)
         {
             //Find the product in the list equal to the submitted product ID.
@@ -86,6 +92,10 @@ namespace DataAccess.Concrete.InMemory
             productToUpdate.UnitsInStock = product.UnitsInStock;
 
         }
-        
+
+        List<ProductDetailDto> IProductDal.GetProductDeteailDtos()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
